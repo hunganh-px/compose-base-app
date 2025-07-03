@@ -7,6 +7,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import replace.the.packagename.AppPreferences
 import replace.the.packagename.BaseApplication
 import javax.inject.Singleton
 

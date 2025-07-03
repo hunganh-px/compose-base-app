@@ -89,56 +89,6 @@ fun ChangeNavigationBarAmbient(lightScreen: Boolean) {
 @Stable
 fun Dp.toPx(): Float = this.value * Resources.getSystem().displayMetrics.density
 
-
-//fun setupRecurringWork(context: Context, gson: Gson, sharedPreferences: SharedPreferences) {
-//    val appSettings =
-//        gson.fromJson(
-//            sharedPreferences.getString(Const.SharedPrefKeys.APP_SETTINGS, null),
-//            AppSettings::class.java
-//        )
-//    val period =
-//        Const.AppSettingsValues.AUTO_UPDATE_CHART_PERIOD_SECONDS[appSettings.autoUpdateChartPeriodSeconds]
-//    Timber.d("WORKER APP SETTINGS $appSettings")
-//    Timber.d("WORKER APP PERIOD $period")
-//    val constraints = Constraints.Builder()
-//        .setRequiredNetworkType(NetworkType.CONNECTED)
-//        .build()
-//
-//    val workRequest = OneTimeWorkRequestBuilder<UpdateChannelWorker>()
-//        .setConstraints(constraints)
-//        .addTag(Const.UPDATE_WORKER_TAG)
-//        .setInitialDelay(
-//            period,
-//            TimeUnit.SECONDS
-//        ).build()
-//
-//    WorkManager.getInstance(context).enqueueUniqueWork(
-//        Const.UPDATE_WORKER_TAG,
-//        ExistingWorkPolicy.APPEND_OR_REPLACE, workRequest
-//    )
-//}
-
-val LIST_CHARTS_COLOR = listOf(
-    Color(0xFFb71c1c),
-    Color(0xFFf57f17),
-    Color(0xFF33691e),
-    Color(0xFF0091ea),
-    Color(0xFFbf360c),
-    Color(0xFF01579b),
-    Color(0xFFdd2c00),
-    Color(0xFFe65100)
-)
-
-@Stable
-fun Color.Companion.getChartsColor(index: Int) = LIST_CHARTS_COLOR[index]
-
-fun generateRandomButtonColor() = run {
-    Color.hsv(
-        hue = Random.nextFloat() * 360f, saturation = Random.nextFloat(), value = .5f
-    )
-
-}
-
 fun String.convertISODateToLongTime(): Long {
     return Instant.parse(this).toEpochMilli()
 }

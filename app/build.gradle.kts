@@ -65,6 +65,8 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation(libs.androidx.navigation.runtime.ktx)
+    implementation(libs.androidx.navigation.compose)
 
     //network requests related
     implementation(libs.moshi)
@@ -76,8 +78,13 @@ dependencies {
     implementation(libs.loggin.interceptor)
     debugImplementation(libs.chucker.debug)
     releaseImplementation(libs.chucker.release)
+    implementation(libs.androidx.hilt.navigation.compose)
 
-    //
+    //utils
     implementation(libs.timber)
+    implementation(libs.accompanist.permissions)
+
+    //map
+    implementation(libs.gmaps.compose)
 
 }
