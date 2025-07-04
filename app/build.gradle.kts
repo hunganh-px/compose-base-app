@@ -79,12 +79,14 @@ dependencies {
     debugImplementation(libs.chucker.debug)
     releaseImplementation(libs.chucker.release)
     implementation(libs.androidx.hilt.navigation.compose)
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
 
     //utils
     implementation(libs.timber)
     implementation(libs.accompanist.permissions)
 
-    //map
-    implementation(libs.gmaps.compose)
+//    map
+//    implementation(libs.gmaps.compose)
 
 }

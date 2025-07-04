@@ -32,7 +32,6 @@ object ApiProvider {
 
     private const val BASE_URL = "localhost:8080"
 
-
     @Singleton
     @Provides
     @ApiRequest
